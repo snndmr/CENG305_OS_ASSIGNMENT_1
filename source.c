@@ -24,12 +24,15 @@ void fileOperation(char sourcePath[], char targetPath[]) {
   }
 }
 
-int main(int argc, char * args[]) {
-  if (argc == 3) {
-    fileOperation(args[1], args[2]);
-  } else {
-    printf("You must enter source and target files paths!");
-  }
+int main() {
+  char sourcePath[BUFFER];
+  char targetPath[BUFFER];
+  
+  printf("Enter source file path : ");
+  scanf("%s", sourcePath);
+  printf("Enter target file path : ");
+  scanf("%s", targetPath);
 
+  fileOperation(sourcePath, targetPath);
   return 0;
 }
